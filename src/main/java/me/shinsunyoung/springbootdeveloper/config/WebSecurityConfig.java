@@ -21,7 +21,7 @@ public class WebSecurityConfig {
 
     // 스프링 시큐리티 기능 비활성화
     @Bean
-    public WebSecurityCustomizer Configure() {
+    public WebSecurityCustomizer configure() {
         return (web) -> web.ignoring()
                 .requestMatchers(toH2Console())
                 .requestMatchers("/static/**");
